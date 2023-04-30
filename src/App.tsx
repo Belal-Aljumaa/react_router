@@ -15,7 +15,7 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/germany" element={<PageGermany />} />
+        <Route path="/germany/*" element={<PageGermany />} />
         <Route path="/france" element={<PageFrance />} />
         <Route path="/spain" element={<PageSpain />} />
         <Route path="/" element={<Navigate to="/germany" replace />} />
