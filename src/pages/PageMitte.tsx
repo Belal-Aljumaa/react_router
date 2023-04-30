@@ -1,11 +1,15 @@
-import { NavLink, Navigate, Route, Routes } from "react-router-dom";
-import { PageUnterDenLinden } from "./PageUnterDenLinden";
-import { PageBrandenburgGate } from "./PageBrandenburgGate";
-import { PageCheckpointCharlie } from "./PageCheckpointCharlie";
+import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
+import { PageUnterDenLinden } from './PageUnterDenLinden';
+import { PageBrandenburgGate } from './PageBrandenburgGate';
+import { PageCheckpointCharlie } from './PageCheckpointCharlie';
+import { Helmet } from 'react-helmet';
 
 export const PageMitte = () => {
   return (
     <>
+      <Helmet>
+        <title>Berlin Mitte Info Site</title>
+      </Helmet>
       <p>Welcome to the Mitte page.</p>
       <nav>
         <NavLink to="checkpointCharlie">Checkpoint Charlie</NavLink>

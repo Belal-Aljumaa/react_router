@@ -3,10 +3,14 @@ import './App.scss';
 import { PageGermany } from './pages/PageGermany';
 import { PageFrance } from './pages/PageFrance';
 import { PageSpain } from './pages/PageSpain';
+import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <div>
+      <Helmet>
+        <title>Travel Info Site</title>
+      </Helmet>
       <h1>Travel Info Site</h1>
       <nav>
         <NavLink to="/germany">Germany</NavLink>

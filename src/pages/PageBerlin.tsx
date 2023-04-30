@@ -2,10 +2,14 @@ import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
 import { PageMitte } from './PageMitte';
 import { PageSteglitz } from './PageSteglitz';
 import { PageTiergarten } from './PageTiergarten';
+import { Helmet } from 'react-helmet';
 
 export const PageBerlin = () => {
   return (
     <>
+      <Helmet>
+        <title>Berlin Info Site</title>
+      </Helmet>
       <p>Welcome to the Berlin page.</p>
       <nav>
         <NavLink to="tiergarten">Tiergarten</NavLink>
