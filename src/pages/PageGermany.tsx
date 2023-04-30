@@ -11,6 +11,16 @@ export const PageGermany = () => {
         <title>Germany Info Site</title>
       </Helmet>
       <p>Welcome to the Germany page.</p>
+      <p>
+        {' '}
+        Be sure to visit cities like{' '}
+        <NavLink to="/germany/hamburg">Hamburg</NavLink> or tourist sites such
+        as the{' '}
+        <NavLink to="/germany/berlin/mitte/brandenburgGate">
+          Brandenburg Gate
+        </NavLink>
+        .
+      </p>
       <nav>
         <NavLink to="hamburg">Hamburg</NavLink>
         <NavLink to="hannover">Hannover</NavLink>
