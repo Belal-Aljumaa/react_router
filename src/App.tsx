@@ -1,8 +1,8 @@
 import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
 import './App.scss';
-import PageGermany from './components/PageGermany';
-import PageFrance from './components/PageFrance';
-import PageSpain from './components/PageSpain';
+import { PageGermany } from './pages/PageGermany';
+import { PageFrance } from './pages/PageFrance';
+import { PageSpain } from './pages/PageSpain';
 
 function App() {
   return (
