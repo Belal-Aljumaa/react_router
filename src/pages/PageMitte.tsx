@@ -1,8 +1,10 @@
-import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
+import { NavLink, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import { PageUnterDenLinden } from './PageUnterDenLinden';
 import { PageBrandenburgGate } from './PageBrandenburgGate';
 import { PageCheckpointCharlie } from './PageCheckpointCharlie';
 import { Helmet } from 'react-helmet';
+import { Page404 } from '../components/Page404';
+import { Blank } from '../components/Blank';
 
 export const PageMitte = () => {
   return (
@@ -21,7 +23,12 @@ export const PageMitte = () => {
         <Route path="brandenburgGate" element={<PageBrandenburgGate />} />
         <Route path="unterDenLinden" element={<PageUnterDenLinden />} />
         <Route path="/" element={<Navigate to="checkpointCharlie" replace />} />
+        <Route path="/" element={<Blank />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
+      <div className="showArea">
+        <Outlet />
+      </div>
     </>
   );
 };

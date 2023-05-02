@@ -3,6 +3,8 @@ import { PageMitte } from './PageMitte';
 import { PageSteglitz } from './PageSteglitz';
 import { PageTiergarten } from './PageTiergarten';
 import { Helmet } from 'react-helmet';
+import { Page404 } from '../components/Page404';
+import { Blank } from '../components/Blank';
 
 export const PageBerlin = () => {
   return (
@@ -21,6 +23,8 @@ export const PageBerlin = () => {
         <Route path="steglitz" element={<PageSteglitz />} />
         <Route path="mitte/*" element={<PageMitte />} />
         <Route path="/" element={<Navigate to="tiergarten" replace />} />
+        <Route path="/" element={<Blank />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </>
   );

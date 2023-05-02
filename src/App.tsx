@@ -4,6 +4,11 @@ import { PageGermany } from './pages/PageGermany';
 import { PageFrance } from './pages/PageFrance';
 import { PageSpain } from './pages/PageSpain';
 import { Helmet } from 'react-helmet';
+import { Blank } from './components/Blank';
+import { Page404 } from './components/Page404';
+import { CityChooseMessage } from './components/CityChooseMessage';
+import { City } from './components/City';
+import cities from './data/spanishCities.json';
 
 function App() {
   return (
@@ -21,8 +26,13 @@ function App() {
       <Routes>
         <Route path="/germany/*" element={<PageGermany />} />
         <Route path="/france" element={<PageFrance />} />
-        <Route path="/spain" element={<PageSpain />} />
+        <Route path="spain" element={<PageSpain cities={cities} />}>
+          <Route path=":idCode" element={<City />} />
+          <Route index element={<CityChooseMessage />} />
+        </Route>
         <Route path="/" element={<Navigate to="/germany" replace />} />
+        <Route path="/" element={<Blank />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </div>
   );

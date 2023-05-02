@@ -25,4 +25,34 @@ body {
       color: rgb(211, 211, 110);
     }
   }
+
+  div.city {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    color: #000;
+    text-shadow: 1px 1px 15px #666;
+
+    img {
+      box-shadow: 1px 1px 15px #666;
+    }
+    .info {
+      .name {
+        font-size: 3rem;
+      }
+      .description {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .cityChoices {
+    a {
+      text-decoration: none;
+      color: red;
+      &:hover {
+        color: orange;
+      }
+    }
+  }
 }

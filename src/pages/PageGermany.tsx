@@ -3,6 +3,8 @@ import { PageBerlin } from './PageBerlin';
 import { PageHannover } from './PageHannover';
 import { PageHamburg } from './PageHamburg';
 import { Helmet } from 'react-helmet';
+import { Blank } from '../components/Blank';
+import { Page404 } from '../components/Page404';
 
 export const PageGermany = () => {
   return (
@@ -30,6 +32,8 @@ export const PageGermany = () => {
         <Route path="hamburg" element={<PageHamburg />} />
         <Route path="hannover" element={<PageHannover />} />
         <Route path="berlin/*" element={<PageBerlin />} />
+        <Route path="/" element={<Blank />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </>
   );
